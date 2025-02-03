@@ -9,7 +9,7 @@ In the example below, the Rick & Morty public API is used to make several querie
 
 The *memoria.client* class is responsible for calling the MGet method, this method executes the call to the external API but first validates if the information of this API is cached in the memoria.store table, if so, it validates that it is within the configured Time to Live (TTL) and returns the data, if the TTL has expired, it deletes the information and generates the call, stores the result and returns it to the program.
 
-![Testing code](img/client.png)
+![Testing code](https://github.com/jcefgit/memoria/blob/main/img/client.png?raw=true)
 
 ***For a statics API, i.e. countries list, cities name, etc. I recomend to use TTL=0, to maintain in store the list.***
 
@@ -19,11 +19,11 @@ in the first call (red square on top) the time for the call was **722ms** and al
 
 After 10 seconds (ttl value) the time growth to **220ms**
 
-![Result](img/api_result.png)
+![Result](https://github.com/jcefgit/memoria/blob/main/img/api_result.png?raw=true)
 
 ## Panel
 
 The Panel is a small application that allows you to manage cached data and delete it if necessary.
 
-![Panel view](img/panel.png)
+![Panel view](https://github.com/jcefgit/memoria/blob/main/img/panel.png?raw=true)
 
